@@ -44,3 +44,10 @@ Algorithm used int:
 Usage:
 
 $ python fuzzedge.py -ip /input-path -op /output-path
+
+
+Example in matlab: https://www.mathworks.com/matlabcentral/fileexchange/113785-fuzzy-edge-detection
+
+Gamma values from paper: https://link.springer.com/article/10.1007/s12530-019-09304-6
+
+img: https://link.springer.com/article/10.1007/s12530-019-09304-6/figures/16
