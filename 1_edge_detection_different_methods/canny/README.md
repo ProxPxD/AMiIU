@@ -35,3 +35,7 @@ The output of the Canny Edge Detector is a binary image where edge pixels are re
 
 The Canny Edge Detector is widely used in various computer vision tasks, including object detection, image segmentation, feature extraction, and image registration, due to its effectiveness and versatility. However, selecting appropriate threshold values and kernel sizes can be challenging and may require experimentation or parameter tuning based on the specific characteristics of the input images.
 
+
+## Final Result
+![](final.png)
+
