@@ -1,7 +1,7 @@
 import numpy as np
 from skimage.filters import gabor_kernel
 from scipy import signal
-from ..utilities import _image_xor
+# from ..utilities import _image_xor
 
 def gt(f, mask, deg=4, freq=[0.05, 0.4]):
     ''' 
