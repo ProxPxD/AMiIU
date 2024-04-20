@@ -1,0 +1,3 @@
+[submodule "2_texture_features_extraction/featset"]
+	path = 2_texture_features_extraction/featset
+	url = https://github.com/mtcazzolato/featset.git

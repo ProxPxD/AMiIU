@@ -3,6 +3,17 @@ from skimage.filters import gabor_kernel
 from scipy import signal
 # from ..utilities import _image_xor
 
+def _image_xor(f):
+    # Turn "0" to "1" and vice versa: XOR with image consisting of "1"s
+    f = f.astype(np.uint8)
+    mask = np.ones(f.shape, np.uint8)
+    out = np.zeros(f.shape, np.uint8)
+    for i in range(f.shape[0]):
+        for j in range(f.shape[1]):
+            out[i,j] = f[i,j] ^ mask[i,j]
+    return out
+
+
 def gt(f, mask, deg=4, freq=[0.05, 0.4]):
     ''' 
     Parameters

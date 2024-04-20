@@ -1,6 +1,22 @@
 import pywt
 import numpy as np
+import math
 # from ..utilities import _pad_image_power_2
+
+
+
+def _next_power_of_two(n):
+    math.ceil(math.log(n,2))
+    return 2 ** math.ceil(math.log(n,2))
+
+def _pad_image_power_2(f):
+    N1, N2 = f.shape
+    N1_deficit = _next_power_of_two(N1) - N1
+    N2_deficit = _next_power_of_two(N2) - N2
+    f2 = np.pad(f, ((math.floor(N1_deficit/2),N1_deficit-math.floor(N1_deficit/2)),
+                    (math.floor(N2_deficit/2),N2_deficit-math.floor(N2_deficit/2))),
+                mode='constant')
+    return f2
 
 def dwt(f, mask, wavelet='bior3.3', levels=3):
     ''' 
